@@ -51,7 +51,7 @@ AWSPowerShell module is already installed
 AWS CLI is installed. Continuing with the rest of the script...
 ```
 
-Le script_query.ps1 vérifiera les informations de connexion à PostgreSQL et exécutera le reste du code d'extraction. Vous pouvez également ajuster la date de début en modifiant le fichier date_extract.  
+Le script_query.ps1 vérifiera les informations de connexion à PostgreSQL et exécutera le reste du code d'extraction. On peut également ajuster la date de début en modifiant le fichier date_extract.  
 
 ### 8. Configurer une tâche planifiée pour exécuter le script quotidiennement :
 ```powershell
@@ -59,5 +59,5 @@ Le script_query.ps1 vérifiera les informations de connexion à PostgreSQL et ex
 
 schtasks /create /tn "ScriptTaskScheduled" /tr "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe C:\Users\ext_Maxen\Desktop\Data_Ingestion\script_query.ps1" /sc daily /st 07:00
 ```
-Vous pouvez également utiliser `/sc once` pour exécuter la tâche une seule fois ce qui équivaut à `.\script_query.ps1`.
+On peut également utiliser `/sc once` pour exécuter la tâche une seule fois ce qui équivaut à `.\script_query.ps1`.
 
